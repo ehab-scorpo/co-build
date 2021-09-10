@@ -55,6 +55,13 @@ p {
   }
 }
 
+button {
+  outline: none !important;
+  &:focus {
+    outline: none !important;
+  }
+}
+
 
 .menu {
   width: 100vw;

@@ -95,7 +95,6 @@ body {
       border-radius: 5rem;
       transition: background 0.2s linear;    
       background-color: $primary;
-      outline: none !important;
       &:hover {
         background-color: #333;
       }

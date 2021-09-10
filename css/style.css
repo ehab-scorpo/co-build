@@ -68,6 +68,14 @@ p {
   }
 }
 
+button {
+  outline: none !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
 .menu {
   width: 100vw;
   height: 100vh;
@@ -296,7 +304,6 @@ body {
   -webkit-transition: background 0.2s linear;
   transition: background 0.2s linear;
   background-color: #f5af00;
-  outline: none !important;
 }
 
 .header .content .getQuote:hover {
