@@ -571,13 +571,9 @@ body {
   }
 }
 
-.image-preview .content .exit {
-  display: none !important;
-}
-
-@media screen {
+@media (max-width: 771px) {
   .image-preview .content .exit {
-    display: block !important;
+    display: none;
   }
 }
 

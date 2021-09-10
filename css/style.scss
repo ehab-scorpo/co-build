@@ -341,9 +341,8 @@ body {
       }
     }
     .exit {
-      display: none !important;
-      @media screen {
-        display: block !important;
+      @media (max-width: 771px) {
+        display: none;
       }
     }
   }
