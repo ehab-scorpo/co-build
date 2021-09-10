@@ -93,7 +93,7 @@ body {
       font-weight: bold;
       padding: 1.5rem 5rem;
       border-radius: 5rem;
-      transition: background 0.2s linear;    
+      transition: background 0.2s linear;
       background-color: $primary;
       &:hover {
         background-color: #333;
@@ -109,8 +109,8 @@ body {
   .cards {
     .card {
       @media (max-width: 991px) {
-        &:not(last-of-type){
-        margin-bottom: 3rem;
+        &:not(last-of-type) {
+          margin-bottom: 3rem;
         }
       }
       @media (max-width: 551px) {
@@ -216,20 +216,19 @@ body {
   h1 {
     color: #222;
     font-weight: 400;
-    margin-bottom: 2rem;    
+    margin-bottom: 2rem;
     @media (max-width: 551px) {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-    
-    @media (min-width: 771px) and  (max-width: 991px) {
+
+    @media (min-width: 771px) and (max-width: 991px) {
       font-size: 26px;
     }
-    
+
     @media (min-width: 991px) {
       line-height: 5rem;
     }
-
   }
   .context {
     @media (max-width: 767px) {
@@ -266,9 +265,7 @@ body {
   }
 }
 
-
 .testimonials {
-
   background-color: #f9f9f9;
   .testimonial {
     @media (max-width: 767px) {
@@ -339,7 +336,7 @@ body {
   .content {
     @media (max-width: 450px) {
       width: 90%;
-    img {
+      img {
         width: 100%;
       }
     }
