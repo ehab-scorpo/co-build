@@ -1,0 +1,348 @@
+@import "./vars";
+@import "./classes";
+
+body {
+  background-color: #fff !important;
+  overflow-x: hidden !important;
+}
+
+.navbar {
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 55;
+  &.light-background {
+    background-color: #fff;
+    color: #333;
+  }
+  .links {
+    .link {
+      font-family: "Poppins", sans-serif;
+      margin: 0 1.5rem;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      transition: color 0.2s linear;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .mobile {
+    .line {
+      width: 4rem;
+      height: 0.2rem;
+      background-color: #fff;
+      transition: all 0.2s ease-in-out;
+      &:nth-of-type(2) {
+        margin: 0.5rem 0;
+      }
+    }
+
+    &.open {
+      .line {
+        &:nth-of-type(1) {
+          transform: rotate(45deg) translateX(1rem);
+        }
+        &:nth-of-type(2) {
+          opacity: 0;
+          transform: translateX(5rem);
+        }
+        &:nth-of-type(3) {
+          transform: rotate(-45deg) translate(1.1rem, -0.1rem);
+        }
+      }
+    }
+  }
+}
+
+.header {
+  color: #fff;
+  background-image: linear-gradient(
+      to right,
+      rgba(51, 51, 51, 0.6),
+      rgba(51, 51, 51, 0.6)
+    ),
+    url("../images/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .content {
+    @media (max-width: 551px) {
+      padding: 0 1rem;
+    }
+    h1 {
+      font-size: 7rem;
+      font-weight: 100;
+      @media (max-width: 991px) {
+        font-size: 5rem;
+      }
+      @media (max-width: 551px) {
+        font-size: 3.5rem;
+      }
+    }
+    p {
+      color: #fff;
+      @media (max-width: 551px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .getQuote {
+      background-color: $primary;
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+}
+
+.services {
+  .heading p {
+    font-size: 1.4rem;
+  }
+  .cards {
+    .card {
+      @media (max-width: 991px) {
+        &:not(last-of-type){
+        margin-bottom: 3rem;
+        }
+      }
+      @media (max-width: 551px) {
+        &:not(last-of-type) {
+          margin-bottom: 2rem;
+        }
+      }
+      .material-icons {
+        font-size: 6rem !important;
+      }
+      h3 {
+        color: #333;
+        font-weight: 100;
+        margin: 1.5rem 0 1rem;
+        @media (max-width: 551px) {
+          margin: 0.5rem 0;
+        }
+      }
+      p {
+        font-size: 14px;
+        color: #999;
+        line-height: 2.5rem;
+      }
+    }
+  }
+}
+
+.work {
+  background: #f8f8f8;
+  .heading {
+    @media (max-width: 551px) {
+      margin-bottom: 5rem;
+    }
+  }
+  .work-cards {
+    .cards-action {
+      span {
+        cursor: pointer;
+        transition: all 0.2s linear;
+        margin: 0 0.5rem;
+        font-family: lora, serif;
+        font-style: italic;
+        color: #888;
+        &:hover,
+        &.active {
+          color: $primary;
+        }
+        &.all {
+          color: $primary;
+        }
+      }
+    }
+
+    .card-container {
+      transition: transform 0.2s linear;
+      transform: scale(1);
+      &.hide {
+        flex: 0 !important;
+        padding: 0 !important;
+        transform: scale(0);
+      }
+      .card {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 2rem;
+
+        img {
+          transform: scale(1);
+          transition: all 0.3s linear;
+        }
+        .content {
+          color: #fff;
+          z-index: 5;
+          opacity: 0;
+          transition: all 0.3s linear;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba($primary, 0.9);
+          opacity: 0;
+          transition: all 0.3s linear;
+        }
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+          &:after,
+          .content {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.skills {
+  h1 {
+    color: #222;
+    font-weight: 400;
+    margin-bottom: 2rem;    
+    @media (max-width: 551px) {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    @media (min-width: 771px) and  (max-width: 991px) {
+      font-size: 26px;
+    }
+    
+    @media (min-width: 991px) {
+      line-height: 5rem;
+    }
+
+  }
+  .context {
+    @media (max-width: 767px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  p {
+    @media (max-width: 551px) {
+    }
+  }
+  .skill {
+    margin-bottom: 3rem;
+    h5 {
+      color: #333;
+    }
+    .bar {
+      position: relative;
+      margin-top: 1rem;
+      background-color: #f2f2f2;
+      height: 0.6rem;
+      border-radius: 0.25rem;
+      overflow: hidden;
+      .progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $primary;
+        width: 0;
+        height: 100%;
+        transition: width 0.5s ease-in-out;
+      }
+    }
+  }
+}
+
+
+.testimonials {
+
+  background-color: #f9f9f9;
+  .testimonial {
+    @media (max-width: 767px) {
+      &.first {
+        margin-bottom: 2rem;
+      }
+    }
+    .content {
+      p {
+        font-style: italic;
+        color: #999;
+        line-height: 3rem;
+        margin-bottom: 2.5rem;
+        @media (max-width: 551px) {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.map {
+  .address {
+    span {
+      font-size: 5rem;
+    }
+    @media (max-width: 767px) {
+      &:not(last-of-type) {
+        margin-bottom: 3rem;
+      }
+      span {
+        font-size: 3rem;
+      }
+      h4 {
+        color: #333;
+      }
+    }
+  }
+}
+
+.footer {
+  .flex {
+    @media (max-width: 551px) {
+      text-align: center;
+      display: block;
+      .copyrights {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .socials {
+    span {
+      color: #888;
+      margin: 0 0.7rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.image-preview {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background: rgba(#000, 0.9);
+  .imgIndx {
+    color: #fff;
+  }
+  button {
+    background: transparent;
+    border: none;
+    color: #888;
+    padding: 1rem;
+    cursor: pointer;
+    transition: color 0.1s linear;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
