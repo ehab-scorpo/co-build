@@ -337,15 +337,16 @@ body {
   z-index: 999999;
   background: rgba(#000, 0.9);
   .content {
+    @media (max-width: 450px) {
+      width: 90%;
     img {
-      @media (max-width: 450px) {
         width: 100%;
       }
     }
-    p {
-      display: none;
+    .exit {
+      display: none !important;
       @media screen {
-        display: block;
+        display: block !important;
       }
     }
   }

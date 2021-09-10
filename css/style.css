@@ -563,18 +563,21 @@ body {
 }
 
 @media (max-width: 450px) {
+  .image-preview .content {
+    width: 90%;
+  }
   .image-preview .content img {
     width: 100%;
   }
 }
 
-.image-preview .content p {
-  display: none;
+.image-preview .content .exit {
+  display: none !important;
 }
 
 @media screen {
-  .image-preview .content p {
-    display: block;
+  .image-preview .content .exit {
+    display: block !important;
   }
 }
 
