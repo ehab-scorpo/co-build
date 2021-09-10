@@ -557,6 +557,22 @@ body {
   background: rgba(0, 0, 0, 0.9);
 }
 
+@media (max-width: 450px) {
+  .image-preview .content img {
+    width: 100%;
+  }
+}
+
+.image-preview .content p {
+  display: none;
+}
+
+@media screen {
+  .image-preview .content p {
+    display: block;
+  }
+}
+
 .image-preview .imgIndx {
   color: #fff;
 }

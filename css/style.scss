@@ -331,6 +331,19 @@ body {
   left: 0;
   z-index: 999999;
   background: rgba(#000, 0.9);
+  .content {
+    img {
+      @media (max-width: 450px) {
+        width: 100%;
+      }
+    }
+    p {
+      display: none;
+      @media screen {
+        display: block;
+      }
+    }
+  }
   .imgIndx {
     color: #fff;
   }
