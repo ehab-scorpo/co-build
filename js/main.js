@@ -106,14 +106,12 @@ let imgIndx;
 cardContainer.forEach(card => {
     let img = card.querySelector('img');
     images.push(img.src)
-    card.querySelectorAll('.preview').forEach(preview => {
-        preview.addEventListener('click', () => {
-            imgElePreview.src = img.src;
-            imgIndx = images.indexOf(img.src) + 1;
-            imagePreview.querySelector('.imgIndx').innerHTML = imgIndx + ' of ' + images.length;
-            imagePreview.style.display = 'block';
-        });
-    })
+    card.addEventListener('click', () => {
+        imgElePreview.src = img.src;
+        imgIndx = images.indexOf(img.src) + 1;
+        imagePreview.querySelector('.imgIndx').innerHTML = imgIndx + ' of ' + images.length;
+        imagePreview.style.display = 'block';
+    });
 });
 
 imagePreview.querySelector('.content').addEventListener('click', (e) => e.stopPropagation())
